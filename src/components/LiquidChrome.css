@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+.liquidChrome-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed; /* keep as background while content scrolls */
+  top: 0;
+  left: 0;
+  background: black;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.liquidChrome-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover;
+=======
+.liquidChrome-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed; /* keep as background while content scrolls */
+  top: 0;
+  left: 0;
+  background: black;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.liquidChrome-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover;
+>>>>>>> 44a7f3b879c725c09f28c9c778173d391d17fe78
+}

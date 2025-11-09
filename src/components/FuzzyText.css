@@ -1,0 +1,105 @@
+<<<<<<< HEAD
+.fuzzy-text-wrapper{
+  position: relative;
+  pointer-events: none; /* canvas is passive unless enableHover is set */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fuzzy-text-wrapper .fuzzy-canvas{
+  pointer-events: auto;
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+/* Center and position styling for large title */
+.fuzzy-top{ 
+  /* place title in normal document flow so it scrolls with the page */
+  position: relative;
+  margin: 24px auto 12px auto;
+  left: 0;
+  transform: none;
+  z-index: 4;
+  pointer-events: none;
+  text-align: center;
+ }
+
+.fuzzy-bottom{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+/* Adjust title position and sizing on small screens */
+@media (max-width: 768px) {
+  .fuzzy-top {
+    top: 16px;
+  }
+
+  .fuzzy-text-wrapper {
+    padding: 0 8px;
+  }
+
+  .fuzzy-text-wrapper canvas {
+    /* allow canvas to shrink on small screens */
+    max-width: 90vw;
+    height: auto !important;
+  }
+}
+=======
+.fuzzy-text-wrapper{
+  position: relative;
+  pointer-events: none; /* canvas is passive unless enableHover is set */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fuzzy-text-wrapper .fuzzy-canvas{
+  pointer-events: auto;
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+/* Center and position styling for large title */
+.fuzzy-top{ 
+  /* place title in normal document flow so it scrolls with the page */
+  position: relative;
+  margin: 24px auto 12px auto;
+  left: 0;
+  transform: none;
+  z-index: 4;
+  pointer-events: none;
+  text-align: center;
+ }
+
+.fuzzy-bottom{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+/* Adjust title position and sizing on small screens */
+@media (max-width: 768px) {
+  .fuzzy-top {
+    top: 16px;
+  }
+
+  .fuzzy-text-wrapper {
+    padding: 0 8px;
+  }
+
+  .fuzzy-text-wrapper canvas {
+    /* allow canvas to shrink on small screens */
+    max-width: 90vw;
+    height: auto !important;
+  }
+}
+>>>>>>> 44a7f3b879c725c09f28c9c778173d391d17fe78

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Comic Viewer</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="viewer-page">
+    <div id="comic-viewer">
+        <button id="back-to-catalog" class="nav-button back-button" onclick="window.location.href='index.html'">&larr; Voltar ao Catálogo</button>
+        
+        <div class="video-container">
+            <video id="video-player" 
+                   preload="auto" 
+                   playsinline
+                   preservesPitch
+                   data-keepframe="true"
+                   x-webkit-airplay="deny"
+                   disablePictureInPicture>
+                Your browser does not support the video element.
+            </video>
+            <video id="preload-player" 
+                   preload="auto" 
+                   playsinline
+                   preservesPitch
+                   data-keepframe="true"
+                   x-webkit-airplay="deny"
+                   disablePictureInPicture>
+            </video>
+        </div>
+        <!-- Background music that should loop and persist while viewer is open -->
+        <audio id="bg-music" loop crossorigin="anonymous">
+            <!-- add your loop file at assets/music/loop.mp3 -->
+            <source src="assets/music/loop.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Overlay prompt shown when autoplay with audio is blocked -->
+        <div id="audio-prompt" style="display:none;">
+            Toque para ativar o áudio
+        </div>
+        
+        <div class="controls-wrapper">
+            <div class="controls round-buttons">
+                <button id="prev-page" class="nav-button nav-button-icon" title="Anterior">
+                    <!-- left arrow icon -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button id="play-pause" class="nav-button nav-button-icon" title="Repetir">
+                    <!-- repeat icon -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M21 7v6h-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 17v-6h6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 7c-1.5-3-4.5-5-9-5-4 0-7.5 2-9 5" stroke="#fff" stroke-width="0"/>
+                    </svg>
+                </button>
+                <button id="next-page" class="nav-button nav-button-icon" title="Próximo">
+                    <!-- right arrow icon -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M9 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="page-info">
+            Página <span id="current-page">1</span> de <span id="total-pages">2</span>
+        </div>
+    </div>
+    <script src="js/viewer.js"></script>
+</body>
+</html>
